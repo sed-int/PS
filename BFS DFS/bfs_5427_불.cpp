@@ -14,6 +14,7 @@ int dx[4] = {-1, 0, 1, 0};
 int dy[4] = (1, 0, -1, 0);
 int w, h;
 
+
 void bfs(int x, int y){
 	while(!Q.empty()){
 		auto cur = Q.front(); Q.pop();
@@ -38,6 +39,7 @@ int main(void){
 		
 		for (int i = 0; i < h; i++) fill(dist1[i], dist1[i]+w, -1);
 		for (int i = 0; i < h; i++) fill(dist2[i], dist2[i]+w, -1);
+		bool isValid = true;
 		
 		for (int i = 0; i < h; i++){
 			for (int j = 0; j < w; j++){
@@ -72,7 +74,8 @@ int main(void){
 				int ny = cur.Y + dy[i];
 				if (nx < 0 || nx >= h || ny < 0 || ny >= w){
 					cout << dist2[cur.X][cur.Y] + 1 << '\n';
-					return (0);
+					isValid = true;
+					break;
 				}
 				if (dist2[nx][ny] <= dist1[nx][ny]) continue;
 				dist2[nx][ny] = dist2[cur.X][cur.Y] + 1;
@@ -80,6 +83,6 @@ int main(void){
 			}
 		}
 
-		cout << "IMPOSSIBLE\n";
+		if (isValid == false) cout << "IMPOSSIBLE\n";
 	}
 }
