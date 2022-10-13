@@ -1,7 +1,4 @@
-// Authored by : cpprhtn
-// Co-authored by : BaaaaaaaaaaarkingDog
-// http://boj.kr/b8488e82105d49e89ca6f39fd8ee665b
-#include <bits/stdc++.h>
+#include <iostream>
 using namespace std;
 
 int N;
