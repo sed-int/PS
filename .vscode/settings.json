@@ -3,6 +3,8 @@
 		"algorithm": "cpp",
 		"string": "cpp",
 		"ios": "cpp",
-		"iostream": "cpp"
+		"iostream": "cpp",
+		"vector": "cpp",
+		"queue": "cpp"
 	}
 }
