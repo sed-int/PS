@@ -9,7 +9,7 @@ int main(void){
     d[1] = 9;
     d[2] = 17;
     for (int i = 3; i <= n; i++){
-        d[i] = (d[i-1] * 2 - 1)%div;
+        d[i] = (d[i-1] * 2 - 1) % div;
     }
     cout << d[n];
 }
